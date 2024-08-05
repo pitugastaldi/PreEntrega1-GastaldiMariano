@@ -1,6 +1,6 @@
 let pinCorrecto = 1234; // PIN correcto del cliente
 let saldo = 1000; // Saldo inicial del cliente
-let transacciones = []; // Array para almacenar el historial de transacciones
+
 
 
 function mostrarMensajeBienvenida() {
@@ -24,7 +24,7 @@ function solicitarPIN() {
 }
 
 function mostrarMenu() {
-  return prompt("Seleccione una opción:\n a- Saldo\n b- Retiro\n c- Depósito\n d- Cambiar PIN\n e- Historial de transacciones\n f- Salir");
+  return prompt("Seleccione una opción:\n a- Saldo\n b- Retiro\n c- Depósito\n d- Cambiar PIN\n e- Salir");
 }
 
 function verSaldo() {
@@ -70,13 +70,6 @@ function cambiarPIN() {
   }
 }
 
-function verHistorialTransacciones() {
-  if (transacciones.length === 0) {
-    alert("No hay transacciones realizadas.");
-  } else {
-    alert("Historial de transacciones:\n" + transacciones.join('\n'));
-  }
-}
 
 function cajeroAutomatico() {
   mostrarMensajeBienvenida();
@@ -99,15 +92,12 @@ function cajeroAutomatico() {
           cambiarPIN();
           break;
         case 'e':
-          verHistorialTransacciones();
-          break;
-        case 'f':
-          alert("Gracias por usar el cajero automático. ¡Hasta luego!");
+         alert("Gracias por usar el cajero automático. ¡Hasta luego!");
           break;
         default:
           alert("Opción no válida. Intente nuevamente.");
       }
-    } while (opcion !== 'f');
+    } while (opcion !== 'e');
   }
 }
 
