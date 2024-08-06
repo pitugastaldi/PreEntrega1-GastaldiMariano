@@ -1,5 +1,5 @@
-let pinCorrecto = 1234; // PIN correcto del cliente
-let saldo = 1000; // Saldo inicial del cliente
+let pinCorrecto = 1234; 
+let saldo = 1000; 
 
 
 
@@ -12,7 +12,7 @@ function solicitarPIN() {
   while (intentos < 3) {
     let pinIngresado = prompt("Ingrese su PIN:");
     if (pinIngresado == pinCorrecto) {
-      alert("PIN correcto. Bienvenido.");
+      alert("PIN correcto. Bienvenido al banco.");
       return true;
     } else {
       intentos++;
@@ -92,7 +92,7 @@ function cajeroAutomatico() {
           cambiarPIN();
           break;
         case 'e':
-         alert("Gracias por usar el cajero automático. ¡Hasta luego!");
+         alert("Gracias por usar el cajero automático. ¡CHAU!");
           break;
         default:
           alert("Opción no válida. Intente nuevamente.");
